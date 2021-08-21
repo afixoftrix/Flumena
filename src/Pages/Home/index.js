@@ -5,6 +5,8 @@ import { floor } from "lodash";
 import APIs from "../../APIs";
 import * as Styles from "./styles";
 
+// eslint-disable-next-line import/no-webpack-loader-syntax
+mapboxgl.workerClass = require("worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker").default;
 mapboxgl.accessToken = APIs.mapbox.token;
 
 const Home = () => {
